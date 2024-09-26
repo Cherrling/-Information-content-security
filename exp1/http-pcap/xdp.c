@@ -32,20 +32,34 @@ int http_filter(struct xdp_md *xdp){
 	if ((void *)(eth + 1) > data_end) {
 		return 0;
 	}
-    // TODO: 过滤非 IPv4 数据包
-	
-
-	// TODO: 解析 IP 头（struct iphdr）
-	
-
-    // TODO: 过滤非 TCP 数据包
     
 
-    // TODO: 解析 TCP 头（struct tcphdr）
-    
-
-    // TODO: 过滤掉非 80 端口的数据包（注意字节序转换问题，可使用bpf_htons将2字节主机序转换为网络序）
-    
+        // 过滤非 IPv4 数据包
+        if (eth->h_proto != bpf_htons(ETH_P_IP)) {
+            return 0;
+        }
+    
+        // 解析 IP 头
+        struct iphdr *iph = (struct iphdr *)(eth + 1);
+        if ((void *)(iph + 1) > data_end) {
+            return 0;
+        }
+    
+        // 过滤非 TCP 数据包
+        if (iph->protocol != IPPROTO_TCP) {
+            return 0;
+        }
+    
+        // 解析 TCP 头
+        struct tcphdr *tcph = (struct tcphdr *)((unsigned char *)iph + iph->ihl * 4);
+        if ((void *)(tcph + 1) > data_end) {
+            return 0;
+        }
+    
+        // 过滤掉非 80 端口的数据包
+        if (bpf_htons(tcph->source) != 80) {
+            return 0;
+        }
 
     return 1;
 }

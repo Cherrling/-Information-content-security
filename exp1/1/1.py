@@ -1,4 +1,4 @@
-import pcap
+#import pcap
 import dpkt
 import time
 import os
@@ -82,7 +82,7 @@ def captureData(iface):
 
 def main():
     # 输一个默认的
-    iface = "ens33"
+    iface = "eno1"
     global IP, PORT
     # 默认是教务处的
     IP = '10.160.2.157'
