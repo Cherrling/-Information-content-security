@@ -6,6 +6,9 @@ import chardet
 from scapy.all import *
 
 
+global IP, PORT
+IP = '10.160.2.157'
+PORT = 80
 def detect_encoding(data):
     result = chardet.detect(data)
     encoding = result['encoding']
@@ -83,10 +86,8 @@ def captureData(iface):
 def main():
     # 输一个默认的
     iface = "ens33"
-    global IP, PORT
-    # 默认是教务处的
-    IP = '10.160.2.157'
-    PORT = 80
+
+
     captureData(iface)
 
 if __name__ == "__main__":
