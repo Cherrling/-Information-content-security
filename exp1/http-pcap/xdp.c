@@ -46,7 +46,32 @@ int http_filter(struct xdp_md *xdp){
 
     // TODO: 过滤掉非 80 端口的数据包（注意字节序转换问题，可使用bpf_htons将2字节主机序转换为网络序）
     
+    // Filter out non-IPv4 packets
+    if (eth->h_proto != bpf_htons(ETH_P_IP)) {
+        return 0; // Pass non-IPv4 packets
+    }
 
+    // Parse IP header
+    struct iphdr *ip = data + sizeof(struct ethhdr);
+    if ((void *)(ip + 1) > data_end) {
+        return 0; // Drop if the IP header is not fully in the packet
+    }
+
+    // Filter out non-TCP packets
+    if (ip->protocol != IPPROTO_TCP) {
+        return 0; // Pass non-TCP packets
+    }
+
+    // Parse TCP header
+    struct tcphdr *tcp = (struct tcphdr *)(data + sizeof(struct ethhdr) + sizeof(struct iphdr));
+    if ((void *)(tcp + 1) > data_end) {
+        return 0; // Drop if the TCP header is not fully in the packet
+    }
+
+    // Filter out packets not destined for port 80
+    if (tcp->dest != bpf_htons(80)) {
+        return 0; // Pass packets not destined for port 80
+    }
     return 1;
 }
 // 将数据包发送到用户态

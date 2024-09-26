@@ -80,7 +80,7 @@ func writeToPcap(w *pcapgo.Writer, pkt *struct {
 
 func main() {
 	// 接收接口名称作为输入参数
-	ifaceName := flag.String("iface", "eno1", "网络接口名称")
+	ifaceName := flag.String("iface", "eth0", "网络接口名称")
 	flag.Parse()
 
 	iface, err := net.InterfaceByName(*ifaceName)
