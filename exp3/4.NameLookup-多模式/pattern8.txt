@@ -1,0 +1,6 @@
+www/hit/edu/mdh
+www/pact518/hit/edu/cn
+http/today/edu
+http/news/hello/
+/com/yahoo/mail
+/com/google/hk

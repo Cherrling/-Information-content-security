@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1446667744 source:d:\baidunetdiskdownload\course\字符串匹配\2. ac-多模式\ac\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1543463137 source:d:\baidunetdiskdownload\course\字符串匹配\2. ac-多模式\ac\acsmx.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"acsmx.h"
+
+1432610151 d:\baidunetdiskdownload\course\字符串匹配\2. ac-多模式\ac\acsmx.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1543463108 source:d:\baidunetdiskdownload\course\字符串匹配\2. ac-多模式\ac\entry.c
+	"acsmx.h"
+	<sys/time.h>
+

@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1432610150 source:d:\baidunetdiskdownload\course\字符串匹配\3. wm-多模式\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/time.h>
+	<sys/types.h>
+	<unistd.h>
+	"wm.h"
+
+1432610150 d:\baidunetdiskdownload\course\字符串匹配\3. wm-多模式\wm.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1432610151 source:d:\baidunetdiskdownload\course\字符串匹配\3. wm-多模式\wm.c
+	"wm.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1432610151 source:d:\baidunetdiskdownload\course\字符串匹配\3. wm-多模式\wm\wm.c
+	"wm.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1432610150 d:\baidunetdiskdownload\course\字符串匹配\3. wm-多模式\wm\wm.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1432610150 source:d:\baidunetdiskdownload\course\字符串匹配\3. wm-多模式\wm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/time.h>
+	<sys/types.h>
+	<unistd.h>
+	"wm.h"
+

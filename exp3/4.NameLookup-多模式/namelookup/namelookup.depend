@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1432610151 source:d:\baidunetdiskdownload\course\字符串匹配\4.namelookup-多模式\namelookup\hash.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"hash.h"
+
+1432610151 d:\baidunetdiskdownload\course\字符串匹配\4.namelookup-多模式\namelookup\hash.h
+
+1543465272 source:d:\baidunetdiskdownload\course\字符串匹配\4.namelookup-多模式\namelookup\mhtable.c
+	<stdbool.h>
+	"mhtable.h"
+	"hash.h"
+
+1543465272 d:\baidunetdiskdownload\course\字符串匹配\4.namelookup-多模式\namelookup\mhtable.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"hash.h"
+
+1543465487 source:d:\baidunetdiskdownload\course\字符串匹配\4.namelookup-多模式\namelookup\urlparse.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1543465487 source:d:\baidunetdiskdownload\course\字符串匹配\4.namelookup-多模式\namelookup\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/time.h>
+	<sys/types.h>
+	<unistd.h>
+	"urlparse.h"
+	"mhtable.h"
+
+1543465272 d:\baidunetdiskdownload\course\字符串匹配\4.namelookup-多模式\namelookup\urlparse.h
+

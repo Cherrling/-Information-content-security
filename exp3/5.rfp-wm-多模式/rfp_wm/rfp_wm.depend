@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1432610150 source:d:\baidunetdiskdownload\course\字符串匹配\5.rfp-wm-多模式\rfp_wm\hash.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"hash.h"
+
+1543468676 d:\baidunetdiskdownload\course\字符串匹配\5.rfp-wm-多模式\rfp_wm\hash.h
+
+1543469250 source:d:\baidunetdiskdownload\course\字符串匹配\5.rfp-wm-多模式\rfp_wm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/time.h>
+	<sys/types.h>
+	<unistd.h>
+	"rfpwm.h"
+	"test.h"
+
+1432610150 d:\baidunetdiskdownload\course\字符串匹配\5.rfp-wm-多模式\rfp_wm\rfpwm.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"hash.h"
+
+1432610150 d:\baidunetdiskdownload\course\字符串匹配\5.rfp-wm-多模式\rfp_wm\test.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"rfpwm.h"
+
+1543473785 source:d:\baidunetdiskdownload\course\字符串匹配\5.rfp-wm-多模式\rfp_wm\rfpwm.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"hash.h"
+	"rfpwm.h"
+
