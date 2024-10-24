@@ -7,5 +7,8 @@ all: StringMatch
 StringMatch: main.c $(AC) $(WM) $(TOOLS)
 	gcc -o StringMatch main.c $(AC) $(WM) $(TOOLS) -O3
 
+cherr: cherr.c $(AC) $(WM) $(TOOLS)
+	gcc -o cherr cherr.c $(AC) $(WM) $(TOOLS) -O3
+
 clean:
 	rm -f StringMatch
