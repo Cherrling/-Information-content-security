@@ -6,7 +6,7 @@ import random
 if __name__ == '__main__':
 
     inputFile = 'data/data.txt'
-    rate = 0.8
+    rate = 0.8 # 一般机器学习走0.8最好
     trainOut = 'data/train.txt'
     testOut = 'data/test.txt'
 

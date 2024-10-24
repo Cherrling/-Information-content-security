@@ -43,11 +43,13 @@ if __name__ == '__main__':
 
             with open(filePath, 'r', encoding='gbk', errors='ignore') as ifs:
                 text = ifs.read()
-                # 自主完成分词工作
-                # 自主完成分词工作
-                # 自主完成分词工作
-                # 自主完成分词工作
-                # 自主完成分词工作
+                # 先构造正则表达式
+                text = re.sub(r'[\s+\.\!\/_,$%^*(+\"\')]+|[+——！，。？、~@#￥%……&*（）]+', '', text)
+                # 中文分词
+                segmented_text = jieba.lcut(text)
+                # print(f"segmented_text: {segmented_text}")
+                # 用空格连成一个字符串
+                segmented_text = " ".join(segmented_text)
                 ofs.write(segmented_text + '\t' + str(dirNameDict[dirName]) + '\n')
         print(dirnum, picked)
         dirnum += 1
